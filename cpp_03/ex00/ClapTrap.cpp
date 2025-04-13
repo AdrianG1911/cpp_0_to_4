@@ -6,7 +6,7 @@
 /*   By: adrgutie <adrgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 19:42:50 by adrgutie          #+#    #+#             */
-/*   Updated: 2025/04/09 21:58:50 by adrgutie         ###   ########.fr       */
+/*   Updated: 2025/04/13 18:49:56 by adrgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap() {
-	std::cout << "Default constuctor called\n";
+	std::cout << "ClapTrap created\n";
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other)
 		: name(other.name), hitPoints(other.hitPoints),
 		energyPoints(other.energyPoints), attackDamage(other.attackDamage) {
-	std::cout << "Copy constuctor called\n";
+	std::cout << "ClapTrap " << name << " copied \n";
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &rhs) {
-	std::cout << "Copy assignment operator called\n";
+	std::cout << "ClapTrap " << rhs.name << " assigned\n";
 	if (this != &rhs) {
 		name = rhs.name;
 		hitPoints = rhs.hitPoints;
@@ -36,16 +36,13 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &rhs) {
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Destructor called\n";
+	std::cout << "ClapTrap " << name << " was destroyed\n";
 }
 
 void ClapTrap::attack(const std::string &target)
 {
-	if (hitPoints <= 0)
-		std::cout << "ClapTrap " << name << " is dead! ;-;\n";
-	else if (energyPoints <= 0)
-		std::cout << "ClapTrap " << name << " has no energy points!\n";
-	else {
+
+	if (this->can_act() == true) {
 		this->energyPoints -= 1;
 		std::cout << "ClapTrap " << name << " attacks " \
 		<< target << ", causing " << attackDamage << " points of damage!\n";
@@ -70,3 +67,16 @@ void ClapTrap::beRepaired(unsigned int amount)
 ClapTrap::ClapTrap(std::string name) : name(name) {
 	std::cout << "ClapTrap " << name << " created!\n";
 };
+
+bool ClapTrap::can_act(void) const
+{
+	if (hitPoints <= 0) {
+		std::cout << "ClapTrap " << name << " is dead! ;-;\n";
+		return (false);
+	}
+	else if (energyPoints <= 0) {
+		std::cout << "ClapTrap " << name << " has no energy points!\n";
+		return (false);
+	}
+	return (true);
+}

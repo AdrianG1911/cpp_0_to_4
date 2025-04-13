@@ -6,7 +6,7 @@
 /*   By: adrgutie <adrgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 20:11:49 by adrgutie          #+#    #+#             */
-/*   Updated: 2025/04/09 21:57:16 by adrgutie         ###   ########.fr       */
+/*   Updated: 2025/04/13 17:48:17 by adrgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,13 @@
 
 int main()
 {
-	ClapTrap ct("Angry Robot");
-	ct.attack("Other Robot");
-	ct.takeDamage(5);
-	ct.beRepaired(3);
-	ct.takeDamage(10);
-	ct.attack("Other Robot");
+	ClapTrap ar("Angry Robot");
+	ClapTrap br = ar;
+	ClapTrap cr;
+	cr = ar;
+	ar.attack("Other Robot");
+	ar.takeDamage(5);
+	ar.beRepaired(3);
+	ar.takeDamage(100);
+	ar.attack("Other Robot");
 }

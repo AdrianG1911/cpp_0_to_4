@@ -6,7 +6,7 @@
 /*   By: adrgutie <adrgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 19:25:25 by adrgutie          #+#    #+#             */
-/*   Updated: 2025/04/09 21:21:30 by adrgutie         ###   ########.fr       */
+/*   Updated: 2025/04/13 18:50:34 by adrgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ class ClapTrap
 		ClapTrap& operator=(const ClapTrap& rhs);
 		~ClapTrap();
 		ClapTrap(std::string name);
+		bool		can_act(void) const;
 		void		attack(const std::string& target);
 		void		takeDamage(unsigned int amount);
 		void		beRepaired(unsigned int amount);
-
 };
 
 #endif
