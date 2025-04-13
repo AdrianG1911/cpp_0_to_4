@@ -6,14 +6,16 @@
 /*   By: adrgutie <adrgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 21:37:08 by adrgutie          #+#    #+#             */
-/*   Updated: 2025/04/13 18:58:20 by adrgutie         ###   ########.fr       */
+/*   Updated: 2025/04/13 20:47:24 by adrgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 #include <iostream>
 
-ScavTrap::ScavTrap() {}
+ScavTrap::ScavTrap() {
+	std::cout << "ScavTrap created\n";
+}
 
 ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other) {
 	std::cout << "ScavTrap " << name << " copied\n";
