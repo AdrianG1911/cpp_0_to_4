@@ -6,19 +6,22 @@
 #    By: adrgutie <adrgutie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/09 18:28:16 by adrgutie          #+#    #+#              #
-#    Updated: 2025/04/15 17:48:58 by adrgutie         ###   ########.fr        #
+#    Updated: 2025/04/15 22:01:35 by adrgutie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= ex02
+NAME		= ex01
 CC			= c++
 RM			= rm -f
 CFLAGS		= -Wall -Wextra -Werror -std=c++98
 
 SRCS		= main.cpp \
-			  ClapTrap.cpp \
-			  ScavTrap.cpp \
-			  FragTrap.cpp
+			  Cat.cpp \
+			  Dog.cpp \
+			  Animal.cpp \
+			  WrongAnimal.cpp \
+			  WrongCat.cpp \
+			  Brain.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
