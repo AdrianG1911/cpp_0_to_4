@@ -23,14 +23,12 @@ Animal::~Animal() {
     std::cout << "Animal destructor\n";
 }
 
-void Animal::makeSound() const
-{
-    std::cout << this->type << " cant make a sound\n";
-}
-
 std::string Animal::getType(void) const
 {
 	return this->type;
 }
 
-
+void Animal::setType(std::string type)
+{
+    this->type = type;
+}

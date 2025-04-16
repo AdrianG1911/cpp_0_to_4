@@ -59,3 +59,10 @@ int main()
 		delete animals[i];
 	}
 }
+
+// int main()
+// {
+// 	Animal animal;
+// 	Cat cat;
+// 	Dog dog;
+// }
