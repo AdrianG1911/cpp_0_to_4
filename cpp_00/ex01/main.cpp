@@ -38,7 +38,7 @@ void	pb_add(PhoneBook &pb)
 		{
 			if (is_number(input) == false)
 			{
-				std::cout << "Enter numbers for phone number\n";
+				std::cout << "Enter only numbers for phone number\n";
 				i--;
 				continue ;
 			}
@@ -64,25 +64,20 @@ int main()
 	{
 		std::string command;
 		std::cout << "Enter command: ";
-		std::cin >> command;
+		std::getline(std::cin, command);
+		//std::cin >> command;
 		if (command == "ADD")
 			pb_add(pb);
 		else if (command == "SEARCH")
 		{
 			std::string index;
 			pb.displayContacts();
-			while (1)
-			{
-				std::cout << "Enter index: ";
-				std::cin >> index;
-				if (is_number(index) == false)
-					std::cout << "Enter a number as index\n";
-				else
-				{
-					pb.displayContactInformaiton(std::stoi(index));
-					break ;
-				}
-			}
+			std::cout << "Enter index: ";
+			std::cin >> index;
+			if (is_number(index) == false)
+				std::cout << "Error not a number\n";
+			else
+				pb.displayContactInformaiton(std::stoi(index));
 		}
 		else if (command == "EXIT")
 			break ;
