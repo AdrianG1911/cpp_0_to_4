@@ -4,6 +4,8 @@
 bool is_number(const std::string &num)
 {
 	int	len = num.length();
+	if (len == 0)
+		return (false);
 	for (int i = 0; i < len; i++)
 	{
 		if (num[i] < '0' || num[i] > '9')
@@ -27,7 +29,8 @@ void	pb_add(PhoneBook &pb)
 	for (int i = 0; i < 5; i++)
 	{
 		std::cout << info[i];
-		std::cin >> input;
+		std::getline(std::cin, input);
+		//std::cin >> input;
 		if (input.length() == 0)
 		{
 			std::cout << "Field cannot be empty\n";
@@ -62,18 +65,21 @@ int main()
 	PhoneBook pb;
 	while (1)
 	{
-		std::string command;
-		std::cout << "Enter command: ";
+		std::string command = "";
+		std::cout << "Enter command: " << std::flush;
 		std::getline(std::cin, command);
+		// if (command.empty())
+		// 	continue ;
 		//std::cin >> command;
 		if (command == "ADD")
 			pb_add(pb);
 		else if (command == "SEARCH")
 		{
-			std::string index;
+			std::string index = "";
 			pb.displayContacts();
-			std::cout << "Enter index: ";
-			std::cin >> index;
+			std::cout << "Enter index: " << std::flush;
+			std::getline(std::cin, index);
+			//std::cin >> index;
 			if (is_number(index) == false)
 				std::cout << "Error not a number\n";
 			else
