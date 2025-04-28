@@ -1,6 +1,7 @@
 #include "WrongAnimal.hpp"
 
 WrongAnimal::WrongAnimal() {
+    type = "none";
     std::cout << "WrongAnimal default constructor\n";
 }
 

@@ -12,7 +12,7 @@ public:
     std::string getType(void) const;
 
 protected:
-    std::string type = "none";
+    std::string type;
 };
 
 #endif // ANIMAL_HPP

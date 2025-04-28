@@ -13,7 +13,7 @@ public:
     void makeSound() const;
     std::string getType(void) const;
 protected:
-    std::string type = "none";
+    std::string type;
 };
 
 #endif // WRONGANIMAL_HPP

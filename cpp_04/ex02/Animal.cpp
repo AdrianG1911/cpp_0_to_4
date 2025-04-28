@@ -2,6 +2,7 @@
 #include <iostream>
 
 Animal::Animal() {
+    type = "none";
     std::cout << "Animal default constructor\n";
 }
 

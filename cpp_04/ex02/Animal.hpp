@@ -13,7 +13,7 @@ public:
     void setType(std::string type);
 
 protected:
-    std::string type = "none";
+    std::string type;
 };
 
 #endif // ANIMAL_HPP
