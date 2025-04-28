@@ -6,7 +6,7 @@
 /*   By: adrgutie <adrgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 13:50:24 by adrgutie          #+#    #+#             */
-/*   Updated: 2025/04/09 19:50:52 by adrgutie         ###   ########.fr       */
+/*   Updated: 2025/04/26 17:32:01 by adrgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ Fixed::Fixed(const int num) : value(num * (1 << fractional_bits))
 	//std::cout << "Int constructor called\n";
 }
 
-Fixed::Fixed(const float num) : value(static_cast<int>(std::roundf(num * (1 << fractional_bits))))
+Fixed::Fixed(const float num) : value(static_cast<int>(roundf(num * (1 << fractional_bits))))
 {
 	//std::cout << "Float constructor called\n";
 }

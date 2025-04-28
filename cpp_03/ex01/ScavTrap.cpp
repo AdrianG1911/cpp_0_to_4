@@ -6,7 +6,7 @@
 /*   By: adrgutie <adrgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 21:37:08 by adrgutie          #+#    #+#             */
-/*   Updated: 2025/04/13 20:47:24 by adrgutie         ###   ########.fr       */
+/*   Updated: 2025/04/28 19:05:48 by adrgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 #include <iostream>
 
 ScavTrap::ScavTrap() {
+	hitPoints = 100;
+	energyPoints = 50;
+	attackDamage = 20;
 	std::cout << "ScavTrap created\n";
 }
 

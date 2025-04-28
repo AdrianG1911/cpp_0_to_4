@@ -6,7 +6,7 @@
 /*   By: adrgutie <adrgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 19:42:50 by adrgutie          #+#    #+#             */
-/*   Updated: 2025/04/13 19:01:37 by adrgutie         ###   ########.fr       */
+/*   Updated: 2025/04/28 19:01:11 by adrgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap() {
+	hitPoints = 10;
+	energyPoints = 10;
+	attackDamage = 0;
 	std::cout << "ClapTrap created\n";
 }
 
