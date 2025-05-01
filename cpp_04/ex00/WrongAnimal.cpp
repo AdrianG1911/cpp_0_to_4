@@ -7,7 +7,7 @@ WrongAnimal::WrongAnimal() {
 
 WrongAnimal::WrongAnimal(const WrongAnimal& other) {
     std::cout << "WrongAnimal copy constructor\n";
-    *this = other;
+    this->type = other.type;
 }
 
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other) {

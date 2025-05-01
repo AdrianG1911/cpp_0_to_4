@@ -8,7 +8,7 @@ Animal::Animal() {
 
 Animal::Animal(const Animal& other) {
     std::cout << "Animal copy constructor\n";
-    *this = other;
+    this->type = other.type;
 }
 
 Animal& Animal::operator=(const Animal& other) {

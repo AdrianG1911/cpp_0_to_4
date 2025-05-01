@@ -19,6 +19,7 @@ delete j;
 j = new Animal();
 *j = *i;
 j->makeSound();
+delete j;
 delete i;
 delete meta;
 const WrongAnimal* wmeta = new WrongAnimal();
