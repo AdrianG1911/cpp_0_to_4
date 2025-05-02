@@ -2,7 +2,7 @@
 #define CURE_HPP
 
 #include "AMateria.hpp"
-#include <iostream>
+#include "ICharacter.hpp"
 
 class Cure : public AMateria {
 public:
@@ -10,8 +10,6 @@ public:
     Cure(const Cure& other);  // Copy constructor
     Cure& operator=(const Cure& other); // Copy assignment
     ~Cure();                           // Destructor
-
-    Cure(std::string const & type);
 
     AMateria* clone() const;
     virtual void use(ICharacter& target);

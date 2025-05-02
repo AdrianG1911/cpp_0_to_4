@@ -2,7 +2,7 @@
 #define ICE_HPP
 
 #include "AMateria.hpp"
-#include <iostream>
+#include "ICharacter.hpp"
 
 class Ice : public AMateria {
 public:
@@ -11,11 +11,8 @@ public:
     Ice& operator=(const Ice& other); // Copy assignment
     ~Ice();                           // Destructor
 
-    Ice(std::string const & type);
-
     AMateria* clone() const;
     virtual void use(ICharacter& target);
-
     // Add your members here
 };
 
